@@ -14,17 +14,14 @@ module.exports = {
     },
   },
   networks: {
-    mainnet: {
-      url: `https://mainnet.infura.io/v3/${process.env.INFURA_KEY}`,
-      accounts: [process.env.PRIVATE_KEY],
-    },
-    sepolia: {
-      url: `https://sepolia.infura.io/v3/${process.env.INFURA_KEY}`,
-      // gasPrice: 35000000000,
+    bsc: {
+      url: `${process.env.BSC_RPC_MAINNET}`,
+      chainId: 56,
+      gasPrice: 3000000000,
       accounts: [process.env.PRIVATE_KEY],
     },
   },
   etherscan: {
-    apiKey: process.env.ETHERSCAN_API_KEY,
+    apiKey: process.env.BSCSCAN_API_KEY,
   },
 };
